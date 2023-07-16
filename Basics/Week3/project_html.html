@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I love Dogs</title>
+    <style>
+      body {
+        background: linear-gradient(#fffde8, #f09c67);
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        color: #4c8492;
+        font-size: 48px;
+      }
+
+      h2 {
+        text-align: center;
+        color: #f09c67;
+        font-size: 32px;
+        font-weight: normal;
+      }
+
+      img {
+        max-width: 50%;
+        display: block;
+        margin: 30px auto;
+        border-radius: 10px;
+      }
+
+      hr {
+        color: #4c8492;
+        border: 2px solid;
+      }
+
+      a {
+        display: block;
+        margin: 0 auto;
+        font-size: 18px;
+      }
+
+      button {
+        display: block;
+        margin: 30px auto;
+        font-size: 32px;
+        background: #4c8492;
+        color: #fff;
+        padding: 15px;
+        border: 3px solid #4c8492;
+        border-radius: 4px;
+        box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        opacity: 0.8;
+        cursor: pointer;
+        background: #fff;
+        color: #4c8492;
+      }
+
+      .container {
+        max-width: 75%;
+        margin: 0 auto;
+      }
+
+      .description {
+        font-size: 24px;
+        line-height: 1.25;
+        padding: 15px 60px 5px 60px;
+        margin: 15px 0;
+      }
+
+      .hyperlinks {
+        text-align: center;
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 16px;
+        padding-bottom: 20px;
+      }
+
+      .kelly {
+        font-family: cursive;
+        font-size: 1.5em;
+        color: #4c8492;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I Love Dogs!!</h1>
+      <h2>Especially my dog, Bentley!</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/588/original/Bentley2.jpg?1688090292"
+        alt="Kelly's dog Bentley"
+      />
+      <hr />
+      <p class="description">
+        Bentley 🐶 is a 12-year old mixed breed dog weighing only 7 pounds. He
+        is half Maltese, half Shih Tzu. The Maltese is considered a toy breed
+        and originated from the island of Malta in Italy. The Shih Tzu is also
+        considered a toy breed and originated from Tibet.
+      </p>
+      <div class="hyperlinks">
+        <a href="https://en.wikipedia.org/wiki/Maltese_dog"
+          >Learn more about the Maltese breed on Wikipedia</a
+        >
+        <br />
+        <a href="https://en.wikipedia.org/wiki/Shih_Tzu"
+          >Learn more about the Shih Tzu breed on Wikipedia</a
+        >
+      </div>
+      <button class="donate-button">Donate to the ASPCA</button>
+      <p class="footer">
+        This page was built by
+        <span class="kelly"> <strong>Kelly McDonough</strong></span>
+      </p>
+    </div>
+    <script>
+      function donate() {
+        let name = prompt("What is your name");
+        let ownDog = prompt("Do you have a dog - Yes or No?");
+
+        /* Reset the value of ownDog to boolean */
+        if (ownDog === "Yes") {
+          ownDog = true;
+        } else {
+          ownDog = false;
+        }
+
+        if (ownDog) {
+          let dogBreed = prompt("What is your dog's breed?;");
+          alert(name + ", I love " + dogBreed + "s, too!");
+        } else {
+          alert(
+            name + ", you should buy or adopt a dog and donate to the ASPCA!"
+          );
+        }
+      }
+      let donateButton = document.querySelector(".donate-button");
+      donateButton.addEventListener("click", donate);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading Books</title>
+    <style>
+      body {
+        background: linear-gradient(
+          to right,
+          rgb(242, 112, 156),
+          rgb(255, 148, 114)
+        );
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid plum;
+        background: white;
+        font-size: 16px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150mx ease-in-out;
+      }
+
+      button:hover {
+        background: plum;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      footer {
+        text-align: center;
+        margin: 15px;
+        font-size: 20px;
+      }
+
+      .theme-button {
+        font-size: 10px;
+        background: black;
+        color: white;
+        padding: 5 8px;
+        border: none;
+      }
+
+      .theme-button:hover {
+        color: black;
+        background: white;
+      }
+
+      .reading-intro-picture {
+        width: 300px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .reading-intro-picture:hover {
+        filter: contrast(80%);
+        transform: scale(1.2);
+      }
+
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        aspect-ratio: 3 / 2;
+        transition: all 50ms ease-in-out;
+      }
+
+      .grid img:hover {
+        transform: scale(1.2);
+        filter: contrast(80%);
+      }
+
+      .dark {
+        background: linear-gradient(
+          112.1deg,
+          rgb(32, 38, 57) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+        color: white;
+      }
+
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .dark a {
+        color: plum;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change Theme</button>
+    <div class="container">
+      <h1>📖 Reading Books 📖</h1>
+      <h2>My Favorite Hobby</h2>
+      <a href="https://en.wikipedia.org/wiki/Reading" target="_blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/089/574/original/book_pile.jpg?1689216879"
+          alt="Stack of Books"
+          class="reading-intro-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/089/575/original/open_book_pile.jpg?1689216887"
+          alt="Pile of Open Books"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/089/576/original/bookcase.jpg?1689216981"
+          alt="Bookshelf"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/089/577/original/line_of_books.jpg?1689217083"
+          alt="Books Lined up on Bench"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/089/763/original/readingbook-ss.jpg?1689300593"
+          alt="Reading"
+        />
+      </div>
+      <p>
+        My favorite hobby is reading books. I like reading murder mysteries,
+        psychological thrillers, and fantasy. There are a lot of apps that you
+        can use to read books, including Kindle. I subscribe to Kindle
+        Unlimited, which provides access to millions of books, thousands of
+        audiobooks, and magazine subscriptions. I also access books and e-books
+        for free through my local library. In order to keep track of which books
+        I've read, want to read and am currently reading, I use the app
+        Goodreads.
+      </p>
+      <button>Learn about Reading</button>
+    </div>
+    <footer>Coded by ❤️ Kelly Mac ❤️</footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        // body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
