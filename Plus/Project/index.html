@@ -4,30 +4,192 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="src/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-    <style>
-      body {
-        font-family: "Raleway", sans-serif;
-      }
-    </style>
   </head>
   <body>
-    <h1>HTML Forms</h1>
-    <form action="">
-      <label for="email"> Enter your Email </label>
-      <input type="text" id="email" />
-      <input type="submit" placeholder="Login" />
-    </form>
+    <div class="container">
+      <div class="weather-app">
+        <form class="city-search">
+          <div class="row">
+            <div class="col-3">
+              <input
+                type="search"
+                placeholder="Enter city"
+                class="form-control shadow-sm"
+                autofocus="on"
+                autocomplete="off"
+              />
+            </div>
+            <div class="col-1">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="current-conditions">Mostly Clear</div>
+        <div class="current-city">Chicago, IL</div>
+        <div class="card-group hourly">
+          <div class="card">
+            <div class="card-body hourly">
+              <p class="card-title">8 PM</p>
+              <p class="card-text emoji">☀️</p>
+              <p class="card-text temp">77°F</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body hourly">
+              <p class="card-title">11 PM</p>
+              <p class="card-text emoji">🌜</p>
+              <p class="card-text temp">72°F</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body hourly">
+              <p class="card-title">2 AM</p>
+              <p class="card-text emoji">🌜</p>
+              <p class="card-text temp">69°F</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body hourly">
+              <p class="card-title">5 AM</p>
+              <p class="card-text emoji">🌜</p>
+              <p class="card-text temp">66°F</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body hourly">
+              <p class="card-title">8 AM</p>
+              <p class="card-text emoji">☀️</p>
+              <p class="card-text temp">69°F</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body hourly">
+              <p class="card-title">11 AM</p>
+              <p class="card-text emoji">☀️</p>
+              <p class="card-text temp">76°F</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body hourly">
+              <p class="card-title">2 PM</p>
+              <p class="card-text emoji">☀️</p>
+              <p class="card-text temp">81°F</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body hourly">
+              <p class="card-title">5 PM</p>
+              <p class="card-text emoji">☀️</p>
+              <p class="card-text temp">80°F</p>
+            </div>
+          </div>
+        </div>
+        <div class="row humidity-wind" style="width: 60%">
+          <div class="col-2 humidity">Humidity: 53%</div>
+          <div class="col-2 wind">Wind: 7 MPH W</div>
+        </div>
+        <div class="card-group daily">
+          <div class="card first">
+            <div class="card-body">
+              <p class="card-title">Mon</p>
+              <p class="card-text emoji">☀️</p>
+              <p class="card-text">
+                <small class="text-muted">81°F</small>
+                <br />
+                <small class="text-muted">66°F</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title">Tue</p>
+              <p class="card-text emoji">☀️</p>
+              <p class="card-text">
+                <small class="text-muted">82°F</small>
+                <br />
+                <small class="text-muted">66°F</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title">Wed</p>
+              <p class="card-text emoji">☀️</p>
+              <p class="card-text">
+                <small class="text-muted">81°F</small>
+                <br />
+                <small class="text-muted">63°F</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title">Thu</p>
+              <p class="card-text emoji">☀️</p>
+              <p class="card-text">
+                <small class="text-muted">84°F</small>
+                <br />
+                <small class="text-muted">65°F</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title">Fri</p>
+              <p class="card-text emoji">☀️</p>
+              <p class="card-text">
+                <small class="text-muted">88°F</small>
+                <br />
+                <small class="text-muted">69°F</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title">Sat</p>
+              <p class="card-text emoji">☀️</p>
+              <p class="card-text">
+                <small class="text-muted">83°F</small>
+                <br />
+                <small class="text-muted">65°F</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title">Sun</p>
+              <p class="card-text emoji">☀️</p>
+              <p class="card-text">
+                <small class="text-muted">81°F</small>
+                <br />
+                <small class="text-muted">65°F</small>
+              </p>
+            </div>
+          </div>
+          <div class="card last">
+            <div class="card-body">
+              <p class="card-title">Mon</p>
+              <p class="card-text emoji">☀️</p>
+              <p class="card-text">
+                <small class="text-muted">85°F</small>
+                <br />
+                <small class="text-muted">66°F</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
