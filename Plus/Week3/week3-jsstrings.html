@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Strings</title>
+    <style>
+      h1 {
+        color: #6443ea;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JS Strings</h1>
+
+    <script>
+      let city = "       Montreal";
+      let country = "Canada";
+      city = city.replace("e", "é").trim();
+      let sentence = `I live in ${city}, ${country}!`;
+      console.log(sentence);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Arrays and Loops</title>
+  </head>
+  <body>
+    <h1>JS Arrays and Loops</h1>
+    <ul>
+      <li>Paris</li>
+      <li>Roma</li>
+      <li>Barcelona</li>
+      <li>Lisbon</li>
+    </ul>
+    <script>
+      function showCity(cityElement) {
+        cityElement.innerHTML = "<strong>" + cityElement.innerHTML + "<strong>";
+      }
+      let cities = document.querySelectorAll("li");
+
+      cities.forEach(showCity);
+    </script>
+  </body>
+</html>
